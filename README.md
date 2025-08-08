@@ -1,73 +1,96 @@
-# Welcome to your Lovable project
+# Bye-Tatouage – Documentation projet
 
-## Project info
+Ce dépôt contient le site d’information SEO-first de la marque « Bye‑Tatouage » (fr-FR).
 
-**URL**: https://lovable.dev/projects/afa9b70b-dfc5-445a-bb4d-3b5013e43647
+## Arborescence
+- /src
+  - /components
+    - /common (FAQ, GalleryInline, TableCompare, CardProduit, BreadcrumbsNav)
+    - /layout (Header, Footer)
+    - SEO.tsx
+  - /layouts
+    - MainLayout.tsx
+  - /pages (toutes les routes listées ci-dessous)
+  - /lib (types métier, config site, supabaseClient placeholder)
+  - /content (placeholders JSON)
+- /public/images (images placeholders IA)
+- /public/sitemap.xml, /public/robots.txt
 
-## How can I edit this code?
+## Design system
+- Couleurs (AA+):
+  - Primary: #00334C (HSL 200 100% 15%)
+  - Secondary: #4C849B (HSL 197 34% 45%)
+  - Accent: #DFA861 (HSL 34 66% 63%)
+  - Neutres: définis en variables CSS (neutral-950…100)
+- Typo: Manrope (titres), Inter (texte). Import Google Fonts dans index.html (display=swap).
+- Échelle: H1 40–44px, H2 30–34px, H3 22–24px, body 16–18px, boutons 16px.
+- Tokens: radius 15px, ombres douces (shadow-soft/elevated), grille 8px, max-width lecture 72ch.
+- Dark mode: non requis en V1.
 
-There are several ways of editing your application.
+Tout est défini en variables HSL dans src/index.css et exposé à Tailwind via tailwind.config.ts. Utilisez les classes utilitaires (ex: text-primary, bg-accent) et les familles font-heading / font-sans. Évitez les couleurs en dur.
 
-**Use Lovable**
+## Composants réutilisables
+- Button/Badge/Card/Table/Tabs/Accordion/Breadcrumb (shadcn déjà présents)
+- Créés: FAQ (schema FAQPage), ToC (sommaire auto H2/H3), GalleryInline (lightbox simple), CardProduit, TableCompare, BreadcrumbsNav
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/afa9b70b-dfc5-445a-bb4d-3b5013e43647) and start prompting.
+## Layouts & Templates
+- MainLayout: Header sticky (mega-menu simple), Footer (mentions + disclaimer), SEO par défaut (react-helmet-async), Organisation + WebSite JSON‑LD.
+- Silo Technique/Zone: H1 + chapo + héro, ToC, GalleryInline, FAQ, Breadcrumbs.
+- Prix: Tableau comparatif + ItemList JSON‑LD.
+- Guide/FAQ long-form: article avec ToC et FAQ (placeholders).
+- Avant/Après: grille + ImageGallery JSON‑LD (placeholder données).
+- Ressources/Kit soins: cartes produits avec boutons externes (# placeholders).
+- Blog Post: à créer sur base du template Guide (voir instructions ci-dessous).
 
-Changes made via Lovable will be committed automatically to this repo.
+## Navigation & Routes
+Pages créées (FR, vides « TODO contenu »):
+- /, /detatouage/, /detatouage/laser/, /detatouage/picoseconde/
+- /prix-detatouage/
+- /guide/, /guide/combien-de-seances-detatouage/, /guide/detatouage-douleur/
+- /zones/, /zones/sourcils/, /zones/maquillage-permanent/
+- /avant-apres/, /avant-apres/bras/
+- /ressources/, /ressources/kit-soins-detatouage/
+- /blog/, /a-propos/, /contact/
 
-**Use your preferred IDE**
+## SEO technique
+- Titres: « {{Titre}} | Bye‑Tatouage » via SEO.tsx
+- Meta description placeholder, canonical absolu, Open Graph/Twitter
+- Données structurées: Organization + WebSite global, FAQ/ItemList/ImageGallery contextuels
+- robots.txt + sitemap.xml présents
+- <html lang="fr">
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Ajouter une page
+1) Créez le fichier dans src/pages/mon-chemin/Index.tsx (ou MonArticle.tsx).
+2) Utilisez MainLayout et, si article/guide, ajoutez ToC et FAQ si nécessaire.
+3) Ajoutez la route dans src/App.tsx (import + <Route path="/mon-chemin" … />).
+4) Placez les images dans /public/images et utilisez des ALT FR descriptifs.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Exemple minimal:
+```
+import MainLayout from "@/layouts/MainLayout";
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+export default function MaPage() {
+  return (
+    <MainLayout title="Titre page" description="Meta description.">
+      <h1>Titre page</h1>
+      <p>TODO contenu…</p>
+    </MainLayout>
+  );
+}
 ```
 
-**Edit a file directly in GitHub**
+## Placeholders à remplacer
+- Images: /public/images (og-default.jpg, hero-*.jpg, gallery-*.jpg, product-*.jpg)
+- Tableaux prix: src/pages/prix-detatouage/Index.tsx
+- FAQ: composant src/components/common/FAQ.tsx (items: {q,a})
+- Produits: src/pages/ressources/Index.tsx (ou src/content/products.json)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Supabase (plus tard)
+- Client utilitaire placeholder: src/lib/supabaseClient.ts
+- Types: src/lib/types.ts (Post, Category, Tag, MediaItem, Product)
+- Quand l’intégration Supabase est activée dans Lovable, importez le client depuis "@/integrations/supabase/client" et remplacez le placeholder.
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/afa9b70b-dfc5-445a-bb4d-3b5013e43647) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Bonnes pratiques
+- Toujours utiliser les tokens (couleurs HSL, radius, ombres).
+- ALT FR descriptifs, images lazy, tailles adaptées.
+- Pas de formulaires ni de tracking en V1.
