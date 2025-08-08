@@ -4,7 +4,7 @@ import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
 
 const GuideCreme = () => (
-  <MainLayout title="Crème de détatouage" description="Pourquoi les \"crèmes miracle\" ne remplacent pas un laser (placeholders).">
+  <MainLayout title="Crème de détatouage" description={'Pourquoi les "crèmes miracle" ne remplacent pas un laser (placeholders).'}>
     <BreadcrumbsNav />
     <header className="mb-4">
       <h1>Crème de détatouage : mythes et limites</h1>
