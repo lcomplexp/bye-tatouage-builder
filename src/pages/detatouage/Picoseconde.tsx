@@ -12,7 +12,7 @@ const Picoseconde = () => {
       <h1>Laser picoseconde</h1>
       <p className="text-muted-foreground">Impulsions ultra-courtes pouvant mieux cibler certains pigments. À comparer avec le <Link to="/detatouage/q-switch" className="underline">Q-Switch</Link> selon la situation.</p>
       <section className="mt-6 rounded-xl overflow-hidden shadow-soft">
-        <img src="/images/hero-technique.jpg" alt="Laser picoseconde – illustration" loading="lazy" />
+        <img src="/images/hero-technique.jpg" alt="Laser picoseconde – illustration" loading="lazy" decoding="async" />
       </section>
       <section className="mt-8">
         <h2>Principe</h2>

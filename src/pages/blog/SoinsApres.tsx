@@ -9,7 +9,7 @@ const BlogSoins = () => (
     <h1>Soins après une séance : l’essentiel</h1>
     <p className="text-muted-foreground">Conseils généraux et matériel utile pour la phase post-laser (placeholders).</p>
     <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-      <img src="/images/hero-technique.jpg" alt="Illustration d’un kit de soins post-laser" loading="lazy" />
+      <img src="/images/hero-technique.jpg" alt="Illustration d’un kit de soins post-laser" loading="lazy" decoding="async" />
     </figure>
     <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
     <ReadNext />

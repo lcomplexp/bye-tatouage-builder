@@ -22,7 +22,13 @@ export const SEO = ({
   includeSiteLd = false,
 }: SEOProps) => {
   const { pathname } = useLocation();
-  const url = canonical || `${SITE.baseUrl}${pathname}`;
+  const normalizePath = (p: string) => (p === "/" ? "/" : p.replace(/\/$/, ""));
+  const path = normalizePath(pathname);
+  const makeCanonical = (u?: string) => {
+    const href = u || `${SITE.baseUrl}${path}`;
+    return href === SITE.baseUrl || href === `${SITE.baseUrl}/` ? SITE.baseUrl : href.replace(/\/$/, "");
+  };
+  const url = makeCanonical(canonical);
   const pageTitle = title ? `${title} | ${SITE.name}` : SITE.name;
 
   const orgLd = {
@@ -43,6 +49,22 @@ export const SEO = ({
       target: `${SITE.baseUrl}/recherche?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
+  };
+
+  // BreadcrumbList JSON-LD (auto)
+  const segments = path.split("/").filter(Boolean);
+  const itemListElement = [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: SITE.baseUrl },
+    ...segments.map((seg, idx) => {
+      const href = `${SITE.baseUrl}/${segments.slice(0, idx + 1).join("/")}`;
+      const name = seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      return { "@type": "ListItem", position: idx + 2, name, item: href };
+    }),
+  ];
+  const breadcrumbsLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement,
   };
 
   return (
@@ -68,8 +90,8 @@ export const SEO = ({
       {includeSiteLd && (
         <script type="application/ld+json">{JSON.stringify(webSiteLd)}</script>
       )}
-      {breadcrumbsJsonLd && (
-        <script type="application/ld+json">{JSON.stringify(breadcrumbsJsonLd)}</script>
+      {(breadcrumbsJsonLd || breadcrumbsLd) && (
+        <script type="application/ld+json">{JSON.stringify(breadcrumbsJsonLd || breadcrumbsLd)}</script>
       )}
     </Helmet>
   );

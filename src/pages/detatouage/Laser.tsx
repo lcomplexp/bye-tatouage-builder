@@ -13,7 +13,7 @@ const Laser = () => {
       <p className="text-muted-foreground">Le laser fragmente l’encre en particules éliminées progressivement par l’organisme. L’efficacité varie selon la couleur, la profondeur et la densité. Estimez un <Link to="/prix-detatouage" className="underline">budget</Link> et le <Link to="/guide/combien-de-seances-detatouage" className="underline">nombre de séances</Link> sur nos pages dédiées.</p>
 
       <section className="mt-6 rounded-xl overflow-hidden shadow-soft">
-        <img src="/images/hero-technique.jpg" alt="Illustration d’un laser médical retirant un tatouage au bras" loading="lazy" />
+        <img src="/images/hero-technique.jpg" alt="Illustration d’un laser médical retirant un tatouage au bras" loading="lazy" decoding="async" />
       </section>
 
       <section className="mt-8">
@@ -57,7 +57,7 @@ const Laser = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {[1,2,3].map((i) => (
             <figure key={i} className="rounded-lg overflow-hidden shadow-soft bg-card">
-              <img src={`/images/gallery-${i}.jpg`} alt={`Illustration avant/après ${i}`} loading="lazy" className="w-full h-40 object-cover" />
+              <img src={`/images/gallery-${i}.jpg`} alt={`Illustration avant/après ${i}`} loading="lazy" decoding="async" className="w-full h-40 object-cover" />
             </figure>
           ))}
         </div>

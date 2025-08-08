@@ -23,7 +23,7 @@ const GuideCicatrice = () => (
         <h2 id="prevention" className="mt-6">Prévention</h2>
         <p>Hygiène douce, protection solaire, suivre les <Link to="/guide/soins-apres-detatouage" className="underline">soins</Link>. Consultez si doute.</p>
         <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-          <img src="/images/hero-zone.jpg" alt="Illustration d’une peau en cicatrisation" loading="lazy" />
+          <img src="/images/hero-zone.jpg" alt="Illustration d’une peau en cicatrisation" loading="lazy" decoding="async" />
         </figure>
         <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
       </article>

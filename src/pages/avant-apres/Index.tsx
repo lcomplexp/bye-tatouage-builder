@@ -38,7 +38,7 @@ const AvantApresIndex = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-4">
         {items.map((i) => (
           <figure key={i.id} className="rounded-lg overflow-hidden shadow-soft bg-card">
-            <img src={i.src} alt={i.alt} width={i.width} height={i.height} loading="lazy" className="w-full h-36 object-cover" />
+            <img src={i.src} alt={i.alt} width={i.width} height={i.height} loading="lazy" decoding="async" className="w-full h-36 object-cover" />
             <figcaption className="text-xs text-muted-foreground p-2">{i.caption}</figcaption>
           </figure>
         ))}

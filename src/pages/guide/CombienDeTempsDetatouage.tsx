@@ -25,7 +25,7 @@ const GuideTemps = () => (
           <li>Phototype et exposition solaire</li>
         </ul>
         <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-          <img src="/images/hero-zone.jpg" alt="Illustration d’un calendrier de séances de détatouage" loading="lazy" />
+          <img src="/images/hero-zone.jpg" alt="Illustration d’un calendrier de séances de détatouage" loading="lazy" decoding="async" />
         </figure>
         <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
       </article>

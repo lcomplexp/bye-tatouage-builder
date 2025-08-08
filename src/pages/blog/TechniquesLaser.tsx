@@ -9,7 +9,7 @@ const BlogTechniques = () => (
     <h1>Techniques laser : panorama rapide</h1>
     <p className="text-muted-foreground">Aperçu des méthodes (laser, picoseconde, Q-Switch) et de leurs principes (placeholders).</p>
     <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-      <img src="/images/hero-technique.jpg" alt="Illustration d’un faisceau laser" loading="lazy" />
+      <img src="/images/hero-technique.jpg" alt="Illustration d’un faisceau laser" loading="lazy" decoding="async" />
     </figure>
     <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
     <ReadNext />

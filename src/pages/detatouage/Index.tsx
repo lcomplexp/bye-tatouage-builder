@@ -17,7 +17,7 @@ const DetatouageIndex = () => {
           <h1>Techniques de détatouage</h1>
           <p className="text-muted-foreground mt-2">Présentation synthétique des principales méthodes (laser, picoseconde, Q-switch). Pour estimer le <Link to="/prix-detatouage" className="underline">prix</Link> et le <Link to="/guide/combien-de-seances-detatouage" className="underline">nombre de séances</Link>, consultez nos pages dédiées.</p>
         </div>
-        <img src="/images/hero-technique.jpg" alt="Illustration d'une machine laser médicale" className="rounded-xl shadow-soft" loading="lazy" />
+        <img src="/images/hero-technique.jpg" alt="Illustration d'une machine laser médicale" className="rounded-xl shadow-soft" loading="eager" fetchpriority="high" decoding="async" />
       </header>
 
       <section className="mt-8">

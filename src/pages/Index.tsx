@@ -34,18 +34,14 @@ const Index = () => {
           </div>
         </div>
         <div className="rounded-xl overflow-hidden shadow-elevated">
-          <img src="/images/hero-zone.jpg" alt="Illustration d’un laser médical retirant un tatouage" className="w-full h-auto" loading="lazy" />
+          <img src="/images/hero-zone.jpg" alt="Illustration d’un laser médical retirant un tatouage" className="w-full h-auto" loading="eager" fetchPriority="high" decoding="async" />
         </div>
       </section>
 
       <section className="mt-10">
         <h2>Par où commencer ?</h2>
         <div className="grid sm:grid-cols-3 gap-4 mt-4">
-          {[
-            { title: "Techniques", link: "/detatouage", desc: "Laser, picoseconde, Q-switch : principes et limites." },
-            { title: "Prix", link: "/prix-detatouage", desc: "Fourchettes indicatives selon taille et sessions." },
-            { title: "Guides", link: "/guide", desc: "Préparation, douleur, cicatrisation, soins." },
-          ].map((c) => (
+          {[{ title: "Techniques", link: "/detatouage", desc: "Laser, picoseconde, Q-switch : principes et limites." }, { title: "Prix", link: "/prix-detatouage", desc: "Fourchettes indicatives selon taille et sessions." }, { title: "Guides", link: "/guide", desc: "Préparation, douleur, cicatrisation, soins." }].map((c) => (
             <Card key={c.title} className="shadow-soft">
               <CardHeader>
                 <CardTitle className="text-base">{c.title}</CardTitle>
@@ -69,14 +65,7 @@ const Index = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
           {topGallery.map((g) => (
             <figure key={g.id} className="rounded-lg overflow-hidden shadow-soft bg-card">
-              <img
-                src={g.src}
-                alt={g.alt}
-                width={g.width}
-                height={g.height}
-                loading="lazy"
-                className="w-full h-36 object-cover"
-              />
+              <img src={g.src} alt={g.alt} width={g.width} height={g.height} loading="lazy" decoding="async" className="w-full h-36 object-cover" />
               <figcaption className="text-xs text-muted-foreground p-2">{g.caption}</figcaption>
             </figure>
           ))}

@@ -22,7 +22,7 @@ const ReadNext = ({ className = "" }: { className?: string }) => {
   }, []);
 
   const key = useMemo(() => pathname.replace(/^\//, "").replace(/\/$/, ""), [pathname]);
-  const items = map?.[key];
+  const items = map?.[key]?.slice(0, 3);
   if (!items?.length) return null;
 
   return (

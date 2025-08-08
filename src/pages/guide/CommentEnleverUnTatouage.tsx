@@ -19,7 +19,7 @@ const GuideComment = () => (
         <h2 id="parcours" className="mt-6">Parcours type</h2>
         <p>Plusieurs séances, espacées, avec protection solaire stricte. La douleur est variable, voir <Link to="/guide/detatouage-douleur" className="underline">notre guide</Link>.</p>
         <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-          <img src="/images/hero-technique.jpg" alt="Illustration d’un faisceau laser visant un pigment" loading="lazy" />
+          <img src="/images/hero-technique.jpg" alt="Illustration d’un faisceau laser visant un pigment" loading="lazy" decoding="async" />
         </figure>
         <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
       </article>

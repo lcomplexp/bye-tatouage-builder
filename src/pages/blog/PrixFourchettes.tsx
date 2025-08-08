@@ -9,7 +9,7 @@ const BlogPrix = () => (
     <h1>Prix du détatouage : fourchettes</h1>
     <p className="text-muted-foreground">Exemples indicatifs de coûts et facteurs qui font varier le budget (placeholders).</p>
     <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-      <img src="/images/hero-zone.jpg" alt="Illustration d’un portefeuille et d’une grille de tarifs" loading="lazy" />
+      <img src="/images/hero-zone.jpg" alt="Illustration d’un portefeuille et d’une grille de tarifs" loading="lazy" decoding="async" />
     </figure>
     <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
     <ReadNext />

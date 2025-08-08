@@ -13,7 +13,7 @@ const QSwitch = () => {
       <p className="text-muted-foreground">Technologie historique du détatouage. Utile selon les encres et le contexte. Comparez avec le <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link>.</p>
 
       <section className="mt-6 rounded-xl overflow-hidden shadow-soft">
-        <img src="/images/hero-technique.jpg" alt="Illustration d’un laser Q-Switch pour détatouage" loading="lazy" />
+        <img src="/images/hero-technique.jpg" alt="Illustration d’un laser Q-Switch pour détatouage" loading="lazy" decoding="async" />
       </section>
 
       <section className="mt-8">

@@ -20,7 +20,7 @@ const GuideSoins = () => (
         <h2 id="pansements" className="mt-6">Pansements et crèmes</h2>
         <p>Utilisez du matériel adapté. Voir notre <a className="underline" href="/ressources/kit-soins-detatouage">kit soins</a>.</p>
         <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-          <img src="/images/hero-technique.jpg" alt="Illustration de soins locaux après laser" loading="lazy" />
+          <img src="/images/hero-technique.jpg" alt="Illustration de soins locaux après laser" loading="lazy" decoding="async" />
         </figure>
         <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
       </article>

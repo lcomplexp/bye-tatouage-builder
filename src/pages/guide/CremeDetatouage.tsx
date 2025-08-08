@@ -20,7 +20,7 @@ const GuideCreme = () => (
         <h2 id="alternatives" className="mt-6">Alternative crédible</h2>
         <p>Le parcours laser encadré reste la référence. Voir <a className="underline" href="/detatouage">techniques</a> et <a className="underline" href="/prix-detatouage">prix</a>.</p>
         <figure className="mt-6 rounded-xl overflow-hidden shadow-soft">
-          <img src="/images/hero-zone.jpg" alt="Illustration d’un tube de crème avec panneau d’alerte" loading="lazy" />
+          <img src="/images/hero-zone.jpg" alt="Illustration d’un tube de crème avec panneau d’alerte" loading="lazy" decoding="async" />
         </figure>
         <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
       </article>

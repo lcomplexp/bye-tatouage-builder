@@ -9,7 +9,15 @@ const CardProduit = ({ product }: { product: Product }) => {
         <CardTitle className="text-base">{product.name}</CardTitle>
       </CardHeader>
       <CardContent>
-        <img src={product.image?.url || "/images/product-1.jpg"} alt={product.image?.alt || product.name} loading="lazy" className="rounded-md w-full h-40 object-cover" />
+        <img
+          src={product.image?.url || "/images/product-1.jpg"}
+          alt={product.image?.alt || product.name}
+          loading="lazy"
+          decoding="async"
+          width={640}
+          height={480}
+          className="rounded-md w-full h-40 object-cover"
+        />
         {product.price && <p className="text-sm text-muted-foreground mt-2">Prix indicatif : {product.price}</p>}
       </CardContent>
       <CardFooter>
