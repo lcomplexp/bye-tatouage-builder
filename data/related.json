@@ -1,0 +1,19 @@
+{
+  "detatouage": ["detatouage/laser", "detatouage/picoseconde", "prix-detatouage"],
+  "detatouage/laser": ["prix-detatouage", "guide/detatouage-douleur", "avant-apres/bras"],
+  "detatouage/picoseconde": ["detatouage/q-switch", "detatouage/laser", "prix-detatouage"],
+  "detatouage/q-switch": ["detatouage/picoseconde", "detatouage/laser", "prix-detatouage"],
+  "prix-detatouage": ["detatouage/laser", "detatouage/picoseconde", "guide/combien-de-seances-detatouage"],
+  "guide/combien-de-seances-detatouage": ["prix-detatouage", "detatouage/laser", "guide/detatouage-douleur"],
+  "guide/detatouage-douleur": ["guide/soins-apres-detatouage", "prix-detatouage", "guide/combien-de-seances-detatouage"],
+  "guide/combien-de-temps-detatouage": ["detatouage/laser", "prix-detatouage", "guide/soins-apres-detatouage"],
+  "guide/comment-enlever-un-tatouage": ["detatouage", "detatouage/picoseconde", "prix-detatouage"],
+  "guide/cicatrice-detatouage": ["guide/soins-apres-detatouage", "guide/detatouage-douleur", "avant-apres"],
+  "guide/soins-apres-detatouage": ["guide/detatouage-douleur", "guide/creme-detatouage", "ressources/kit-soins-detatouage"],
+  "guide/creme-detatouage": ["detatouage", "guide/soins-apres-detatouage", "guide/combien-de-seances-detatouage"],
+  "zones/sourcils": ["guide/soins-apres-detatouage", "avant-apres", "zones/maquillage-permanent"],
+  "zones/maquillage-permanent": ["zones/sourcils", "guide/soins-apres-detatouage", "avant-apres"],
+  "avant-apres": ["avant-apres/bras", "detatouage", "prix-detatouage"],
+  "avant-apres/bras": ["avant-apres", "detatouage/laser", "guide/soins-apres-detatouage"],
+  "ressources/kit-soins-detatouage": ["guide/soins-apres-detatouage", "guide/detatouage-douleur", "avant-apres"]
+}

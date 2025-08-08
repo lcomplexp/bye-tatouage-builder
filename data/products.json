@@ -1,0 +1,56 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Crème apaisante post-laser",
+    "shortDesc": "Apaise et hydrate après une séance de détatouage.",
+    "image": { "url": "/images/product-1.jpg", "alt": "Crème apaisante post-détatouage" },
+    "asin": "B0000001",
+    "url": "#",
+    "notes": "Appliquer en fine couche sur peau propre."
+  },
+  {
+    "id": "prod-2",
+    "name": "Pansements stériles compressifs",
+    "shortDesc": "Protection locale les premières 24–48 h.",
+    "image": { "url": "/images/product-2.jpg", "alt": "Pansements stériles pour détatouage" },
+    "asin": "B0000002",
+    "url": "#",
+    "notes": "Changer si humide ou souillé."
+  },
+  {
+    "id": "prod-3",
+    "name": "Nettoyant doux sans parfum",
+    "shortDesc": "Lavage délicat sans irriter la zone traitée.",
+    "image": { "url": "/images/product-3.jpg", "alt": "Nettoyant doux après détatouage" },
+    "asin": "B0000003",
+    "url": "#",
+    "notes": "Rincer à l’eau tiède, tamponner sans frotter."
+  },
+  {
+    "id": "prod-4",
+    "name": "Crème barrière réparatrice",
+    "shortDesc": "Aide à restaurer la barrière cutanée.",
+    "image": { "url": "/images/product-1.jpg", "alt": "Crème barrière réparatrice" },
+    "asin": "B0000004",
+    "url": "#",
+    "notes": "2×/jour pendant 5–7 jours."
+  },
+  {
+    "id": "prod-5",
+    "name": "Pack compresses stériles",
+    "shortDesc": "Séchage tamponné et hygiène.",
+    "image": { "url": "/images/product-2.jpg", "alt": "Compresses stériles" },
+    "asin": "B0000005",
+    "url": "#",
+    "notes": "Usage unique."
+  },
+  {
+    "id": "prod-6",
+    "name": "Gel apaisant à l’aloé",
+    "shortDesc": "Sensation de fraîcheur, à utiliser avec parcimonie.",
+    "image": { "url": "/images/product-3.jpg", "alt": "Gel apaisant aloé" },
+    "asin": "B0000006",
+    "url": "#",
+    "notes": "Ne remplace pas les conseils de votre praticien."
+  }
+]
