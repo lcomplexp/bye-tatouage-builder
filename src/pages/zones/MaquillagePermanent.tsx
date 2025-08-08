@@ -1,9 +1,12 @@
 import MainLayout from "@/layouts/MainLayout";
+import ReadNext from "@/components/common/ReadNext";
+import { Link } from "react-router-dom";
 
 const ZonesMP = () => (
-  <MainLayout title="Détatouage maquillage permanent" description="Page zone – placeholder.">
+  <MainLayout title="Détatouage maquillage permanent" description="Indications et précautions (placeholders).">
     <h1>Détatouage maquillage permanent</h1>
-    <p className="text-muted-foreground">TODO contenu.</p>
+    <p className="text-muted-foreground">Lèvres, sourcils : zones sensibles. Consultez <Link className="underline" to="/guide/soins-apres-detatouage">Soins après détatouage</Link> et la galerie <Link className="underline" to="/avant-apres">Avant/Après</Link>.</p>
+    <ReadNext />
   </MainLayout>
 );
 

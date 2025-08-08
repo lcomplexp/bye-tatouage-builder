@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import CardProduit from "@/components/common/CardProduit";
 import { useLocalData } from "@/hooks/useLocalData";
+import ReadNext from "@/components/common/ReadNext";
 
 interface Product { id: string; name: string; shortDesc: string; image: { url: string; alt: string }; asin: string; url: string; notes: string }
 interface GalleryItem { id: string; zone: string; caption: string; src: string; width: number; height: number; alt: string }
@@ -95,6 +96,7 @@ const Index = () => {
       </section>
 
       <p className="text-xs text-muted-foreground mt-10">Ces informations ne remplacent pas un avis médical.</p>
+      <ReadNext />
     </MainLayout>
   );
 };
