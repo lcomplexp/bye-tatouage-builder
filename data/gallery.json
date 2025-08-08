@@ -1,14 +1,14 @@
 [
-  { "id": "g1",  "zone": "bras",     "caption": "Bras – éclaircissement progressif",        "src": "/images/gallery-1.jpg", "width": 1600, "height": 1067, "alt": "Avant/Après bras – éclaircissement" },
-  { "id": "g2",  "zone": "sourcils", "caption": "Sourcils – maquillage permanent",           "src": "/images/gallery-2.jpg", "width": 1600, "height": 1067, "alt": "Sourcils – maquillage permanent retiré" },
-  { "id": "g3",  "zone": "couleur",  "caption": "Tatouage couleur – étapes",                "src": "/images/gallery-3.jpg", "width": 1600, "height": 1067, "alt": "Tatouage couleur – progression" },
-  { "id": "g4",  "zone": "bras",     "caption": "Bras – sessions multiples",                "src": "/images/gallery-1.jpg", "width": 1600, "height": 1067, "alt": "Illustration bras – retrait laser" },
-  { "id": "g5",  "zone": "sourcils", "caption": "Sourcils – retouches espacées",            "src": "/images/gallery-2.jpg", "width": 1600, "height": 1067, "alt": "Illustration sourcils – détatouage maquillage permanent" },
-  { "id": "g6",  "zone": "couleur",  "caption": "Couleurs vives – plus de séances",         "src": "/images/gallery-3.jpg", "width": 1600, "height": 1067, "alt": "Tatouage couleur vive – éclaircissement" },
-  { "id": "g7",  "zone": "bras",     "caption": "Noir/gris – réponse variable",             "src": "/images/gallery-1.jpg", "width": 1600, "height": 1067, "alt": "Tatouage noir – retrait progressif" },
-  { "id": "g8",  "zone": "sourcils", "caption": "Sourcils – suivi de cicatrisation",        "src": "/images/gallery-2.jpg", "width": 1600, "height": 1067, "alt": "Sourcils – cicatrisation locale" },
-  { "id": "g9",  "zone": "couleur",  "caption": "Pigments mixtes – approche graduelle",     "src": "/images/gallery-3.jpg", "width": 1600, "height": 1067, "alt": "Tatouage pigments mixtes – retrait" },
-  { "id": "g10", "zone": "bras",     "caption": "Bras – macro zones",                       "src": "/images/gallery-1.jpg", "width": 1600, "height": 1067, "alt": "Illustration bras – zones traitées" },
-  { "id": "g11", "zone": "sourcils", "caption": "Sourcils – résultat partiel",              "src": "/images/gallery-2.jpg", "width": 1600, "height": 1067, "alt": "Sourcils – éclaircissement partiel" },
-  { "id": "g12", "zone": "couleur",  "caption": "Couleurs – persistance variable",          "src": "/images/gallery-3.jpg", "width": 1600, "height": 1067, "alt": "Tatouage couleur – persistance pigmentaire" }
+  { "id": "g1",  "zone": "bras",     "caption": "Bras – éclaircissement progressif",        "src": "/images/gallery-1.jpg",   "width": 1600, "height": 1067, "alt": "Avant/Après bras – éclaircissement" },
+  { "id": "g2",  "zone": "sourcils", "caption": "Sourcils – maquillage permanent",           "src": "/images/gallery-2.jpg",   "width": 1600, "height": 1067, "alt": "Sourcils – maquillage permanent retiré" },
+  { "id": "g3",  "zone": "couleur",  "caption": "Tatouage couleur – étapes",                "src": "/images/gallery-3.jpg",   "width": 1600, "height": 1067, "alt": "Tatouage couleur – progression" },
+  { "id": "g4",  "zone": "bras",     "caption": "Bras – sessions multiples",                "src": "/images/gallery-4.webp",  "width": 1024, "height": 768,  "alt": "Illustration bras – retrait laser" },
+  { "id": "g5",  "zone": "sourcils", "caption": "Sourcils – retouches espacées",            "src": "/images/gallery-5.webp",  "width": 1024, "height": 768,  "alt": "Illustration sourcils – détatouage maquillage permanent" },
+  { "id": "g6",  "zone": "couleur",  "caption": "Couleurs vives – plus de séances",         "src": "/images/gallery-6.webp",  "width": 1024, "height": 768,  "alt": "Tatouage couleur vive – éclaircissement" },
+  { "id": "g7",  "zone": "bras",     "caption": "Noir/gris – réponse variable",             "src": "/images/gallery-7.webp",  "width": 1024, "height": 768,  "alt": "Tatouage noir – retrait progressif" },
+  { "id": "g8",  "zone": "sourcils", "caption": "Sourcils – suivi de cicatrisation",        "src": "/images/gallery-8.webp",  "width": 1024, "height": 768,  "alt": "Sourcils – cicatrisation locale" },
+  { "id": "g9",  "zone": "couleur",  "caption": "Pigments mixtes – approche graduelle",     "src": "/images/gallery-9.webp",  "width": 1024, "height": 768,  "alt": "Tatouage pigments mixtes – retrait" },
+  { "id": "g10", "zone": "bras",     "caption": "Bras – macro zones",                       "src": "/images/gallery-10.webp", "width": 1024, "height": 768,  "alt": "Illustration bras – zones traitées" },
+  { "id": "g11", "zone": "sourcils", "caption": "Sourcils – résultat partiel",              "src": "/images/gallery-11.webp", "width": 1024, "height": 768,  "alt": "Sourcils – éclaircissement partiel" },
+  { "id": "g12", "zone": "couleur",  "caption": "Couleurs – persistance variable",          "src": "/images/gallery-12.webp", "width": 1024, "height": 768,  "alt": "Tatouage couleur – persistance pigmentaire" }
 ]
