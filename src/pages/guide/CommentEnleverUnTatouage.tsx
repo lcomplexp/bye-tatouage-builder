@@ -3,6 +3,7 @@ import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
 import { Link } from "react-router-dom";
+import { SITE } from "@/lib/siteConfig";
 
 const GuideComment = () => (
   <MainLayout title="Comment enlever un tatouage" description="Options de détatouage et points clés à connaître (placeholders).">
@@ -27,6 +28,15 @@ const GuideComment = () => (
       </aside>
     </div>
     <ReadNext />
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Comment enlever un tatouage ?",
+      description: "Options de détatouage et points clés à connaître (placeholders).",
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/guide/comment-enlever-un-tatouage` },
+      author: { "@type": "Organization", name: SITE.name },
+      publisher: { "@type": "Organization", name: SITE.name }
+    })}</script>
   </MainLayout>
 );
 

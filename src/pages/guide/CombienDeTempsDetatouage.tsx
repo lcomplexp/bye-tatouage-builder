@@ -3,6 +3,7 @@ import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
 import { Link } from "react-router-dom";
+import { SITE } from "@/lib/siteConfig";
 
 const GuideTemps = () => (
   <MainLayout title="Combien de temps pour un détatouage" description="Délais entre les séances et durée totale du parcours (placeholders).">
@@ -33,6 +34,15 @@ const GuideTemps = () => (
       </aside>
     </div>
     <ReadNext />
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Combien de temps pour un détatouage ?",
+      description: "Délais entre les séances et durée totale du parcours (placeholders).",
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/guide/combien-de-temps-detatouage` },
+      author: { "@type": "Organization", name: SITE.name },
+      publisher: { "@type": "Organization", name: SITE.name }
+    })}</script>
   </MainLayout>
 );
 

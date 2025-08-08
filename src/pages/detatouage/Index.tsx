@@ -6,6 +6,7 @@ import FAQ from "@/components/common/FAQ";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import ReadNext from "@/components/common/ReadNext";
+import { SITE } from "@/lib/siteConfig";
 
 const DetatouageIndex = () => {
   return (
@@ -65,6 +66,13 @@ const DetatouageIndex = () => {
         { q: "Est-ce douloureux ?", a: "La sensation varie selon la zone et le réglage. Voir le guide dédié sur la douleur (placeholder)." },
       ]} />
       <ReadNext />
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Détatouage – techniques",
+        description: "Vue d'ensemble des techniques de détatouage : laser, picoseconde, Q-switch. Indications et limites (placeholders).",
+        url: `${SITE.baseUrl}/detatouage`
+      })}</script>
     </MainLayout>
   );
 };

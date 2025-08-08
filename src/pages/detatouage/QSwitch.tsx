@@ -3,6 +3,7 @@ import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import FAQ from "@/components/common/FAQ";
 import ReadNext from "@/components/common/ReadNext";
 import { Link } from "react-router-dom";
+import { SITE } from "@/lib/siteConfig";
 
 const QSwitch = () => {
   return (
@@ -60,6 +61,16 @@ const QSwitch = () => {
       ]} />
       <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
       <ReadNext />
+      <script type="application/ld+json">{JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Détatouage Q-Switch",
+        description: "Fonctionnement, indications et comparaison avec picoseconde (placeholders).",
+        image: `${SITE.baseUrl}/images/hero-technique.jpg`,
+        mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/detatouage/q-switch` },
+        author: { "@type": "Organization", name: SITE.name },
+        publisher: { "@type": "Organization", name: SITE.name }
+      })}</script>
     </MainLayout>
   );
 };

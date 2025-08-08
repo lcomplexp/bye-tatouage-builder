@@ -2,6 +2,7 @@ import MainLayout from "@/layouts/MainLayout";
 import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
+import { SITE } from "@/lib/siteConfig";
 
 const GuideSoins = () => (
   <MainLayout title="Soins après détatouage" description="Hygiène, protection et étapes clés de cicatrisation (placeholders).">
@@ -28,6 +29,15 @@ const GuideSoins = () => (
       </aside>
     </div>
     <ReadNext />
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Soins après détatouage",
+      description: "Hygiène, protection et étapes clés de cicatrisation (placeholders).",
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/guide/soins-apres-detatouage` },
+      author: { "@type": "Organization", name: SITE.name },
+      publisher: { "@type": "Organization", name: SITE.name }
+    })}</script>
   </MainLayout>
 );
 

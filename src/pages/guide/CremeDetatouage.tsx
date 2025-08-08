@@ -2,6 +2,7 @@ import MainLayout from "@/layouts/MainLayout";
 import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
+import { SITE } from "@/lib/siteConfig";
 
 const GuideCreme = () => (
   <MainLayout title="Crème de détatouage" description={'Pourquoi les "crèmes miracle" ne remplacent pas un laser (placeholders).'}>
@@ -28,6 +29,15 @@ const GuideCreme = () => (
       </aside>
     </div>
     <ReadNext />
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: "Crème de détatouage : mythes et limites",
+      description: "Pourquoi les crèmes miracle ne remplacent pas un laser (placeholders).",
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/guide/creme-detatouage` },
+      author: { "@type": "Organization", name: SITE.name },
+      publisher: { "@type": "Organization", name: SITE.name }
+    })}</script>
   </MainLayout>
 );
 
