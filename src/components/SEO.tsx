@@ -72,6 +72,7 @@ export const SEO = ({
       <title>{pageTitle}</title>
       <link rel="canonical" href={url} />
       <meta name="description" content={description} />
+      {!SITE.indexable && <meta name="robots" content="noindex,nofollow" />}
 
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={description} />
