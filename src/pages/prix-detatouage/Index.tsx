@@ -1,7 +1,7 @@
 import MainLayout from "@/layouts/MainLayout";
 import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
-import FAQ from "@/components/common/FAQ";
+import FAQComponent from "@/components/common/FAQ";
 import { SITE } from "@/lib/siteConfig";
 import { Link } from "react-router-dom";
 
@@ -90,7 +90,7 @@ const PrixIndex = () => {
         <ToC />
       </div>
 
-      <FAQ
+      <FAQComponent
         items={[
           { q: "Le détatouage est-il remboursé ?", a: "Non, c’est un acte esthétique non remboursé en règle générale." },
           { q: "Quand obtient-on un devis ?", a: "Après évaluation en consultation, selon la taille, la densité et les couleurs." },
