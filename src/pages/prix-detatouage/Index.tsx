@@ -1,6 +1,7 @@
 import MainLayout from "@/layouts/MainLayout";
 import ReadNext from "@/components/common/ReadNext";
 import ToC from "@/components/common/ToC";
+import FAQ from "@/components/common/FAQ";
 import { SITE } from "@/lib/siteConfig";
 import { Link } from "react-router-dom";
 
