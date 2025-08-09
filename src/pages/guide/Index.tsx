@@ -9,7 +9,11 @@ const GuideIndex = () => {
   const title = "Guides & FAQ du détatouage | Bye-Tatouage";
   const description = "Conseils pratiques après séance, douleur, nombre de séances, crèmes et effets secondaires.";
 
-  const guides = [
+  const tags = ["Tous", "Techniques", "Soins", "Prix", "Effets secondaires"] as const;
+  type Tag = typeof tags[number];
+  type RealTag = Exclude<Tag, "Tous">;
+
+  const guides: ReadonlyArray<{ title: string; to: string; excerpt: string; tags: ReadonlyArray<RealTag> }> = [
     { title: "Combien de séances de détatouage ?", to: "/guide/combien-de-seances-detatouage", excerpt: "Facteurs clés et repères pour estimer votre protocole.", tags: ["Techniques", "Prix"] },
     { title: "Soins après détatouage", to: "/guide/soins-apres-detatouage", excerpt: "Routine, produits, erreurs à éviter pour cicatriser vite.", tags: ["Soins"] },
     { title: "Combien de temps pour détatouer ?", to: "/guide/combien-de-temps-detatouage", excerpt: "Délais moyens entre les séances et durée totale.", tags: ["Techniques"] },
@@ -19,9 +23,11 @@ const GuideIndex = () => {
     { title: "Détatouage et douleur", to: "/guide/detatouage-douleur", excerpt: "À quoi s’attendre et comment mieux tolérer.", tags: ["Effets secondaires"] },
   ] as const;
 
-  const tags = ["Tous", "Techniques", "Soins", "Prix", "Effets secondaires"] as const;
-  const [active, setActive] = useState<(typeof tags)[number]>("Tous");
-  const filtered = useMemo(() => (active === "Tous" ? guides : guides.filter((g) => g.tags.includes(active))), [active, guides]);
+  const [active, setActive] = useState<Tag>("Tous");
+  const filtered = useMemo(() => {
+    const filterTag: RealTag | null = active === "Tous" ? null : (active as RealTag);
+    return filterTag ? guides.filter((g) => g.tags.includes(filterTag)) : guides;
+  }, [active, guides]);
 
   return (
     <MainLayout title={title} description={description}>
