@@ -7,155 +7,210 @@ import { Link } from "react-router-dom";
 import { SITE } from "@/lib/siteConfig";
 
 const Laser = () => {
-  const description = "Fonctionnement du détatouage au laser, types de lasers (Q‑Switch, picoseconde), déroulement d’une séance, avantages/limites et précautions à connaître.";
+  const description = "Détatouage au laser : fonctionnement, résultats, nombre de séances, risques et soins. Comparaison Q‑Switched vs picoseconde.";
   return (
     <MainLayout title="Détatouage au laser | Bye-Tatouage" description={description}>
       <BreadcrumbsNav />
-      <h1>Détatouage au laser</h1>
+      <h1>Détatouage au laser : fonctionnement, résultats et conseils pratiques</h1>
       <p className="text-muted-foreground mt-2">
-        Le <strong>détatouage au laser</strong> est aujourd’hui la méthode de référence pour atténuer ou retirer un tatouage de façon
-        progressive. Des impulsions extrêmement courtes ciblent les pigments, les fragmentent, puis l’organisme les évacue au fil
-        des semaines. Selon la couleur et la densité de l’encre, on privilégie des technologies différentes, comme le
-        <Link to="/detatouage/q-switch" className="underline">Q‑Switch</Link> ou le <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link>. Cette page explique le fonctionnement, le
-        déroulement d’une séance, les avantages et limites, ainsi que les précautions à connaître. Pour les aspects budgétaires,
-        consultez aussi nos <Link to="/prix-detatouage" className="underline">fourchettes de prix</Link>.
+        Le <strong>détatouage au laser</strong> s’est imposé comme la méthode la plus utilisée pour atténuer ou retirer un tatouage, car
+        il cible l’encre sans abîmer durablement la peau. Des impulsions très courtes fragmentent les pigments, puis
+        l’organisme les élimine progressivement au fil des semaines. Ce guide complet explique, de manière claire et
+        accessible, le principe d’action, les types de lasers, le déroulement d’une séance, les avantages et limites,
+        ainsi que les effets secondaires possibles et les précautions à prendre. Vous trouverez aussi une comparaison
+        rapide entre <Link to="/detatouage/q-switch" className="underline">Q‑Switched</Link> et
+        <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link>, des conseils concrets et des liens vers des
+        ressources utiles pour préparer votre projet en toute sérénité.
       </p>
 
       <section className="mt-6 rounded-xl overflow-hidden shadow-soft">
-        <img src="/images/hero-tech.webp" alt="Illustration plate d’un dispositif de détatouage au laser en clinique" decoding="async" />
+        <img src="/images/hero-tech.webp" alt="Dispositif de détatouage au laser utilisé en clinique" decoding="async" />
       </section>
 
       <div className="mt-6 grid gap-6 md:grid-cols-[1fr_280px]">
         <article>
           <section className="mt-2">
-            <h2>Principe du détatouage laser</h2>
+            <h2>Comment fonctionne le détatouage au laser ?</h2>
             <p>
-              Le principe du détatouage laser repose sur un effet photoacoustique : l’énergie délivrée en un temps très court
-              fragmente les particules d’encre sans léser durablement les tissus environnants. Ces micro‑fragments deviennent
-              accessibles aux cellules de l’immunité (notamment les macrophages), qui les drainent progressivement via la
-              circulation lymphatique. Ce processus est lent par nature, d’où l’intérêt d’espacer les séances et de laisser à la
-              peau le temps de récupérer entre chaque passage.
+              Le laser envoie une énergie très brève qui provoque un effet photoacoustique sur les pigments du tatouage.
+              Cette énergie fragmente l’encre en particules plus petites, que les cellules immunitaires (notamment les
+              macrophages) peuvent ensuite drainer via la circulation lymphatique. La peau n’est pas « poncée » : l’action
+              est ciblée sur le pigment, ce qui explique le bon ratio efficacité/sécurité lorsque les paramètres sont
+              correctement réglés et que les intervalles entre séances sont respectés.
             </p>
             <p>
-              Pour optimiser l’efficacité, plusieurs paramètres sont ajustés : la <em>longueur d’onde</em> (afin de viser certaines
-              couleurs avec plus de précision), la <em>durée d’impulsion</em> (nano ou picoseconde), la <em>fluence</em> (énergie par
-              surface) et la taille du spot. Le choix dépend de la teinte dominante, de la densité et de la profondeur des
-              pigments, mais aussi du <em>phototype</em> cutané. En pratique, on utilise souvent des lasers de type
-              <Link to="/detatouage/q-switch" className="underline">Q‑Switch</Link> (nanoseconde) et, selon les cas, des systèmes
-              <Link to="/detatouage/picoseconde" className="underline">picosecondes</Link>.
+              Plusieurs technologies coexistent. Les lasers <Link to="/detatouage/q-switch" className="underline">Q‑Switched</Link>
+              délivrent des impulsions en nanosecondes, tandis que les systèmes en
+              <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link> réduisent encore la durée d’impulsion
+              pour accentuer l’effet mécanique sur des encres tenaces. Le choix dépend de la couleur dominante, de la
+              densité et de la profondeur des pigments, mais aussi du phototype de peau et des antécédents cutanés.
+            </p>
+            <ul className="list-disc pl-5 mt-3 space-y-1">
+              <li><strong>Longueur d’onde</strong> adaptée aux couleurs ciblées (1064/532&nbsp;nm, 755/694&nbsp;nm selon les cas).</li>
+              <li><strong>Durée d’impulsion</strong> (nano vs pico) influençant la fragmentation mécanique des pigments.</li>
+              <li><strong>Fluence</strong> et <strong>taille du spot</strong> ajustées à la densité et à la profondeur de l’encre.</li>
+              <li><strong>Espacement des séances</strong> pour laisser le temps au système immunitaire d’évacuer.</li>
+              <li><strong>Photoprotection</strong> stricte pour limiter les variations pigmentaires après traitement.</li>
+            </ul>
+          </section>
+
+          <section className="mt-6">
+            <h2>Avantages du laser</h2>
+            <p>
+              Le détatouage au laser est apprécié pour sa <strong>ciblage sélectif des pigments</strong>, sa
+              <strong>sécurité relative</strong> lorsqu’il est pratiqué par un professionnel expérimenté, et sa <strong>souplesse</strong>
+              (possibilité d’éclaircir avant un cover, travail progressif zone par zone). Il s’applique à de nombreux
+              tatouages, y compris anciens ou denses, avec une stratégie adaptée à chaque cas.
+            </p>
+            <ul className="list-disc pl-5 mt-3 space-y-1">
+              <li><strong>Efficace</strong> sur la majorité des encres noires et bleu‑foncé; résultats visibles séance après séance.</li>
+              <li><strong>Paramétrable</strong> (longueur d’onde, énergie, taille du spot) pour s’ajuster à la peau et aux couleurs.</li>
+              <li><strong>Préservant</strong> les tissus environnants par rapport aux méthodes abrasives ou chimiques.</li>
+              <li><strong>Compatible</strong> avec un projet de recouvrement en réduisant la densité avant un cover.</li>
+            </ul>
+          </section>
+
+          <section className="mt-6">
+            <h2>Inconvénients et limites</h2>
+            <p>
+              Comme toute technique, le laser comporte des contraintes. La sensation peut être désagréable, proche d’un
+              claquement d’élastique. Certaines couleurs (verts, turquoises, rouges vifs) répondent moins rapidement et
+              nécessitent plus de séances. <em>La réaction varie d’une personne à l’autre</em>, selon la densité d’encre, la profondeur
+              du tatouage, la localisation et le phototype cutané.
+            </p>
+            <p>
+              Le nombre total de passages peut être conséquent pour une pièce large et saturée, et le budget grimpe en
+              conséquence. <em>Sur peaux mates ou récemment bronzées</em>, on redouble de prudence pour éviter les variations
+              pigmentaires. Une <strong>évaluation personnalisée</strong> permet d’anticiper ces limites et d’adapter la stratégie.
             </p>
           </section>
 
           <section className="mt-6">
-            <h2>Les différents types de lasers utilisés</h2>
-            <h3 className="mt-2 text-base font-semibold">Q‑Switched (Nd:YAG 1064/532&nbsp;nm)</h3>
+            <h2>Déroulement d’une séance</h2>
+            <ol className="list-decimal pl-5 space-y-2">
+              <li>
+                <strong>Avant</strong> — Consultation, analyse du tatouage et de la peau, photos de référence, consignes d’éviction
+                solaire et, si besoin, test sur petite zone. Peau propre le jour J, sans crème photosensibilisante.
+              </li>
+              <li>
+                <strong>Préparation</strong> — Nettoyage de la zone, protection oculaire, éventuelle anesthésie locale légère selon
+                la sensibilité et les habitudes du centre.
+              </li>
+              <li>
+                <strong>Réglages</strong> — Choix de la longueur d’onde, de l’énergie, de la taille du spot et du rythme des impacts
+                en fonction des couleurs, de la densité et de la profondeur des pigments.
+              </li>
+              <li>
+                <strong>Impacts</strong> — Application homogène sur le motif; sensation brève et piquante variant selon la zone et la
+                saturation. La séance dure de quelques minutes à plus d’une demi‑heure.
+              </li>
+              <li>
+                <strong>Soins immédiats</strong> — Refroidissement si nécessaire, application d’un soin apaisant non parfumé, protection
+                mécanique en cas de frottement.
+              </li>
+              <li>
+                <strong>Après</strong> — Respect d’un intervalle (souvent 6–8&nbsp;semaines). Photoprotection stricte et hygiène douce;
+                voir <Link to="/guide/soins-apres-detatouage" className="underline">soins après détatouage</Link>.
+              </li>
+            </ol>
+          </section>
+
+          <section className="mt-6">
+            <h2>Nombre de séances et résultats attendus</h2>
             <p>
-              Les lasers Q‑Switched délivrent des impulsions en nanosecondes. La longueur d’onde 1064&nbsp;nm cible efficacement le
-              noir et le bleu, tandis que 532&nbsp;nm est utilisée sur certaines teintes chaudes (rouge/orange). Leurs atouts : une
-              technologie éprouvée, polyvalente et largement disponible. Leurs limites : davantage de séances envisageables pour
-              des encres denses ou multicolores, et une prudence accrue sur les peaux mates afin d’éviter les variations de
-              pigmentation. Pour un aperçu focalisé, voyez la page <Link to="/detatouage/q-switch" className="underline">laser Q‑Switch</Link>.
+              Le nombre de séances dépend de nombreux facteurs : taille et densité du motif, type d’encre, ancienneté, couleurs
+              présentes, localisation (afflux sanguin), phototype, cicatrices préexistantes. Un petit tatouage noir, peu dense,
+              peut nécessiter 3 à 5 passages; une pièce colorée et saturée peut aller bien au‑delà. L’intervalle de 6 à 8 semaines
+              laisse le temps au système immunitaire d’agir et à la peau de récupérer.
             </p>
-            <h3 className="mt-4 text-base font-semibold">Lasers picosecondes</h3>
             <p>
-              Les lasers picosecondes émettent des impulsions encore plus courtes, avec un effet mécanique plus marqué sur la
-              fragmentation des pigments. Ils peuvent offrir un gain d’efficacité sur certaines encres tenaces, mais ne remplacent
-              pas pour autant systématiquement les Q‑Switched. Le choix se fait au cas par cas, en tenant compte des couleurs,
-              de la densité du tatouage et des antécédents cutanés. Pour en savoir plus, consultez
-              <Link to="/detatouage/picoseconde" className="underline">notre page dédiée</Link>.
+              Exemple de planning typique : premières séances rapprochées pour « amorcer » la fragmentation, puis rythme régulier
+              jusqu’au niveau d’éclaircissement souhaité. Des photos avant/après permettent de juger la progression de façon
+              objective et d’ajuster les paramètres si nécessaire.
             </p>
-            <h3 className="mt-4 text-base font-semibold">Autres longueurs d’onde (755/694&nbsp;nm)</h3>
-            <p>
-              Certains centres utilisent également des systèmes émettant autour de 755&nbsp;nm (alexandrite) ou 694&nbsp;nm (rubis) pour
-              cibler des couleurs particulières. Ces approches restent complémentaires : selon le nuancier du tatouage, une
-              combinaison de longueurs d’onde peut être envisagée au fil du protocole. L’objectif demeure d’obtenir une atténuation
-              progressive, en minimisant les effets indésirables.
+            <p><strong>
+              Une consultation préalable est indispensable</strong> pour estimer la faisabilité, discuter des objectifs (effacement
+              ou éclaircissement avant cover), aborder les contre‑indications et chiffrer un budget réaliste.
             </p>
           </section>
 
           <section className="mt-6">
-            <h2>Déroulement d’une séance de détatouage au laser</h2>
-            <h3 className="mt-2 text-base font-semibold">Avant la séance</h3>
+            <h2>Effets secondaires possibles</h2>
             <p>
-              Une consultation initiale permet d’évaluer la peau, le tatouage, les couleurs en présence et les éventuelles
-              contre‑indications. On rappelle d’éviter le soleil et les autobronzants dans les semaines qui précèdent. Selon les
-              habitudes du centre, une photo de référence est prise, et un test peut être réalisé sur une petite zone. Il est
-              également conseillé d’arriver avec une peau propre, sans crème occlusive, et d’avoir signalé tout traitement
-              photosensibilisant.
+              Les suites immédiates les plus fréquentes sont de courte durée : rougeur, chaleur, léger œdème, parfois petites
+              croûtes ou phlyctènes localisées. Des variations pigmentaires peuvent survenir, surtout en cas d’exposition solaire
+              trop précoce. Les cicatrices sont rares lorsque les paramètres sont adaptés et que les soins sont respectés.
             </p>
-            <h3 className="mt-4 text-base font-semibold">Pendant la séance</h3>
-            <p>
-              La zone est nettoyée puis protégée si besoin (lunettes de sécurité, zones adjacentes). Le praticien règle le laser en
-              fonction des paramètres retenus et délivre les impacts de manière homogène. La sensation est brève et piquante ; elle
-              varie selon la densité du tatouage et l’emplacement. La durée totale peut aller de quelques minutes à plus d’une
-              demi‑heure pour des pièces plus importantes.
-            </p>
-            <h3 className="mt-4 text-base font-semibold">Après la séance</h3>
-            <p>
-              Un érythème et un léger œdème sont courants dans les heures qui suivent. Des soins simples sont recommandés :
-              refroidissement local si nécessaire, application d’un produit apaisant non parfumé et protection mécanique de la zone
-              en cas de frottements. L’exposition solaire doit être évitée ; une photo‑protection stricte est de mise jusqu’à
-              complète récupération cutanée. Reportez‑vous à nos <Link to="/guide/soins-apres-detatouage" className="underline">soins après détatouage</Link>.
-            </p>
+            <ul className="list-disc pl-5 mt-3 space-y-1">
+              <li>Refroidir la zone si besoin et éviter les frictions durant quelques jours.</li>
+              <li>Appliquer un soin apaisant simple; proscrire gommages, rétinol et actifs irritants pendant la réparation.</li>
+              <li>Photoprotection stricte jusqu’à récupération complète, puis protection régulière sur la zone.</li>
+              <li>Signaler tout antécédent de troubles pigmentaires ou de cicatrisation chéloïdienne.</li>
+            </ul>
           </section>
 
           <section className="mt-6">
-            <h2>Avantages et limites du laser</h2>
+            <h2>Comparaison avec d’autres techniques</h2>
             <p>
-              Les principaux atouts du laser sont sa <strong>ciblage sélectif</strong> des pigments, son <strong>profil de sécurité</strong> bien
-              documenté lorsque les paramètres sont adaptés, et la possibilité de travailler par paliers. Il convient également aux
-              détatouages partiels (lightening avant recouvrement), en offrant une atténuation contrôlée. En revanche, plusieurs
-              <strong>limites</strong> existent : nombre de séances parfois élevé, <Link to="/prix-detatouage" className="underline">coût cumulatif</Link>,
-              variabilité de réponse selon les couleurs (certains verts/rouges) et prudence accrue sur peaux mates.
+              Les deux grandes familles utilisées en détatouage sont les lasers <Link to="/detatouage/q-switch" className="underline">Q‑Switched</Link>
+              et <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link>. Le tableau ci‑dessous synthétise les points clés.
             </p>
-            <p>
-              Dans quelques situations, le laser n’est pas l’option prioritaire (tatouage très superficiel susceptible de s’estomper
-              spontanément, lésions cutanées actives, traitements photosensibilisants en cours). Une évaluation personnalisée est
-              toujours nécessaire pour déterminer l’opportunité, la fenêtre de tir et le protocole. Pour une vue d’ensemble des
-              possibilités, vous pouvez parcourir <Link to="/detatouage" className="underline">notre page d’introduction au détatouage</Link>.
-            </p>
-          </section>
-
-          <section className="mt-6">
-            <h2>Effets secondaires et précautions à prendre</h2>
-            <p>
-              Les effets attendus et généralement transitoires comprennent rougeurs, œdème, sensation de chaleur et, parfois,
-              petites croûtes ou phlyctènes localisées. Des variations pigmentaires (hypo/hyperpigmentation) peuvent survenir,
-              surtout en cas d’exposition solaire trop précoce. Exceptionnellement, des cicatrices apparaissent, souvent liées à des
-              frottements répétés, un grattage ou une sur‑exfoliation pendant la phase de réparation cutanée.
-            </p>
-            <p>
-              Pour réduire les risques, respectez les intervalles entre les séances, suivez les <Link to="/guide/soins-apres-detatouage" className="underline">soins
-              post‑traitement</Link> et protégez‑vous rigoureusement du soleil. Signalez tout antécédent de troubles pigmentaires,
-              de cicatrisation chéloïdienne, ou de médication photosensibilisante. En cas de doute sur un signe d’alerte (douleur
-              persistante, suintement), sollicitez un avis sans attendre.
-            </p>
-          </section>
-
-          <section className="mt-6">
-            <h2>Comparaison avec d’autres méthodes</h2>
-            <p>
-              D’anciennes méthodes (dermabrasion, excision chirurgicale, peelings chimiques agressifs) visaient le tatouage de
-              manière moins sélective, avec un risque cicatriciel plus marqué. Les crèmes et solutions « détatouantes » vendues en
-              ligne n’ont pas démontré d’efficacité pour éliminer des pigments implantés en profondeur et peuvent irriter la peau.
-              Le laser se distingue par son action ciblée sur l’encre et son ratio bénéfice/risque lorsqu’il est bien conduit.
-            </p>
-            <p>
-              Pour un tour d’horizon des pistes et choix possibles, consultez <Link to="/guide/comment-enlever-un-tatouage" className="underline">Comment enlever un tatouage</Link>.
-              Vous y trouverez des repères pour situer le laser parmi les autres approches, et comprendre dans quels cas chaque
-              option peut s’envisager.
+            <div className="overflow-x-auto mt-3">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr>
+                    <th className="text-left p-2">Critère</th>
+                    <th className="text-left p-2">Q‑Switched</th>
+                    <th className="text-left p-2">Picoseconde</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="p-2">Durée d’impulsion</td>
+                    <td className="p-2">Nanoseconde</td>
+                    <td className="p-2">Picoseconde (encore plus courte)</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2">Couleurs ciblées</td>
+                    <td className="p-2">Noirs/bleus excellents; 532&nbsp;nm pour teintes chaudes</td>
+                    <td className="p-2">Gain potentiel sur certaines encres tenaces</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2">Nombre de séances</td>
+                    <td className="p-2">Variable; souvent plus élevé sur les pièces denses</td>
+                    <td className="p-2">Parfois réduit selon cas, sans garantie universelle</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2">Confort/risques</td>
+                    <td className="p-2">Référence éprouvée, paramètres bien connus</td>
+                    <td className="p-2">Sensation comparable; exigences de photoprotection identiques</td>
+                  </tr>
+                  <tr>
+                    <td className="p-2">Disponibilité/coût</td>
+                    <td className="p-2">Largement disponible, coût modéré</td>
+                    <td className="p-2">Plateformes plus coûteuses, disponibilité variable</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-3">
+              En pratique, beaucoup de protocoles combinent ou alternent selon l’évolution. Le
+              <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link> n’annule pas l’intérêt du
+              <Link to="/detatouage/q-switch" className="underline">Q‑Switched</Link>; il s’y ajoute comme option dans des
+              situations spécifiques.
             </p>
           </section>
 
           <section className="mt-6">
             <h2>Conclusion</h2>
             <p>
-              Le <strong>détatouage au laser</strong> offre une approche progressive, ajustable et documentée pour atténuer un tatouage en
-              préservant au mieux les tissus. Le choix des paramètres (longueur d’onde, impulsion, énergie), de la technologie
-              (Q‑Switched ou picoseconde) et des intervalles conditionne l’efficacité et la tolérance. En complément, une hygiène de
-              soins et une photoprotection rigoureuses contribuent à limiter les effets secondaires. Pour aller plus loin, comparez
-              <Link to="/detatouage/picoseconde" className="underline">laser picoseconde</Link> et <Link to="/detatouage/q-switch" className="underline">laser Q‑Switch</Link>, et estimez un budget avec la page
-              <Link to="/prix-detatouage" className="underline">Prix du détatouage</Link>.
+              Le <strong>détatouage au laser</strong> offre une approche progressive et personnalisable pour éclaircir ou retirer un
+              tatouage, avec un bon équilibre entre efficacité et sécurité lorsque les consignes sont respectées. En vous informant
+              sur le fonctionnement, les étapes et les limites, vous pourrez construire un projet réaliste et serein. Poursuivez avec
+              notre page <Link to="/detatouage/picoseconde" className="underline">détatouage picoseconde</Link> et consultez les
+              <Link to="/guide/soins-apres-detatouage" className="underline">soins après détatouage</Link> pour optimiser la
+              récupération. Pour un avis personnalisé, planifiez une consultation: elle permettra de définir un protocole adapté,
+              d’estimer le nombre de séances et le budget, et d’anticiper les précautions à respecter.
             </p>
           </section>
         </article>
@@ -165,10 +220,30 @@ const Laser = () => {
 
       <FAQ
         items={[
-          { q: "La procédure est-elle douloureuse ?", a: "La sensation est brève et piquante ; elle dépend de la zone et de la sensibilité individuelle. Des moyens d’atténuation peuvent être proposés." },
-          { q: "Quel intervalle entre les séances ?", a: "Le plus souvent 6–8 semaines pour laisser le temps à la peau de récupérer et au système immunitaire d’évacuer les pigments." },
-          { q: "Puis-je m’exposer au soleil ?", a: "Il faut éviter l’exposition avant et après les séances. Une protection solaire stricte est recommandée." },
-          { q: "Risque de cicatrices ?", a: "Il est faible avec des paramètres adaptés et des soins rigoureux, mais pas nul. Informez-vous sur les signes d’alerte et suivez les consignes." },
+          {
+            q: "Le détatouage au laser est-il douloureux ?",
+            a: "La sensation évoque souvent un claquement d’élastique: brève, piquante et plus ou moins marquée selon la zone, la densité d’encre et votre sensibilité. Le praticien ajuste les paramètres pour limiter l’inconfort et peut utiliser un refroidissement ou une anesthésie locale légère si nécessaire. La gêne reste transitoire et ne préjuge pas de la qualité du résultat. Un échange préalable permet d’anticiper au mieux ce ressenti et d’adapter le protocole à votre tolérance.",
+          },
+          {
+            q: "Combien de séances sont nécessaires ?",
+            a: "Cela dépend de la taille du motif, de la densité, des couleurs, de l’ancienneté et de la localisation. Un petit tatouage noir peut s’éclaircir en 3 à 5 séances, tandis qu’une pièce colorée et saturée peut en demander davantage. Les intervalles de 6 à 8 semaines laissent à la peau et au système immunitaire le temps d’agir. Le nombre exact n’est jamais garanti, mais des photos régulières aident à objectiver la progression.",
+          },
+          {
+            q: "Peut-on enlever toutes les couleurs ?",
+            a: "Les encres noires et bleu-foncé répondent très bien, surtout avec le 1064 nm. Les teintes chaudes (rouge/orange) sont ciblées par 532 nm. Certaines couleurs comme certains verts ou turquoises peuvent être plus résistantes. Les plateformes picosecondes apportent un gain potentiel dans des cas tenaces, sans remplacer entièrement les Q‑Switched. Une stratégie personnalisée, parfois combinée, offre les meilleures chances d’éclaircissement.",
+          },
+          {
+            q: "Quels sont les risques et effets secondaires ?",
+            a: "Les suites les plus fréquentes sont temporaires: rougeur, chaleur, léger œdème, parfois petites croûtes. Des variations pigmentaires peuvent survenir, surtout en cas d’exposition solaire précoce. Les cicatrices sont rares lorsque les paramètres sont adaptés et que les soins post‑traitement sont respectés. Prévenir le praticien de tout antécédent de troubles pigmentaires ou de cicatrisation aide à limiter les risques.",
+          },
+          {
+            q: "Le résultat est-il définitif ?",
+            a: "Le détatouage vise une atténuation maximale, parfois un effacement quasi complet selon les cas. Des traces fantômes ou des ombres peuvent persister, surtout sur des pièces anciennes, saturées ou très colorées. L’objectif doit être discuté: effacement total, éclaircissement avant cover, ou réduction ciblée. Un suivi avec photos et ajustements de paramètres permet d’optimiser la trajectoire au fil des séances.",
+          },
+          {
+            q: "Quels soins après la séance ?",
+            a: "Refroidir si besoin, appliquer un soin apaisant simple, éviter les frictions et les produits irritants, et surtout maintenir une photoprotection stricte. Les douches sont possibles mais sans gommage ni frottement de la zone. Surveiller l’évolution les premiers jours et contacter le centre en cas de douleur inhabituelle, suintement ou signe d’infection. Voir la page Soins après détatouage pour un protocole détaillé.",
+          },
         ]}
       />
 

@@ -22,7 +22,7 @@ const FAQ = ({ items }: { items: QA[] }) => {
       <Accordion type="single" collapsible className="mt-4">
         {items.map((it, idx) => (
           <AccordionItem key={idx} value={`item-${idx}`}>
-            <AccordionTrigger className="text-left">{it.q}</AccordionTrigger>
+            <AccordionTrigger className="text-left"><strong>{it.q}</strong></AccordionTrigger>
             <AccordionContent>{it.a}</AccordionContent>
           </AccordionItem>
         ))}
