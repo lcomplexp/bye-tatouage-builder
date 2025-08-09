@@ -1,8 +1,8 @@
 {
   "detatouage": ["detatouage/laser", "detatouage/picoseconde", "prix-detatouage"],
-  "detatouage/laser": ["prix-detatouage", "guide/detatouage-douleur", "avant-apres/bras"],
+  "detatouage/laser": ["prix-detatouage", "detatouage/picoseconde", "avant-apres/bras"],
   "detatouage/picoseconde": ["detatouage/q-switch", "detatouage/laser", "prix-detatouage"],
-  "detatouage/q-switch": ["detatouage/picoseconde", "detatouage/laser", "prix-detatouage"],
+  "detatouage/q-switch": ["detatouage/picoseconde", "prix-detatouage", "guide/detatouage-douleur"],
   "prix-detatouage": ["detatouage/laser", "detatouage/picoseconde", "guide/combien-de-seances-detatouage"],
   "guide/combien-de-seances-detatouage": ["prix-detatouage", "detatouage/laser", "guide/detatouage-douleur"],
   "guide/detatouage-douleur": ["guide/soins-apres-detatouage", "prix-detatouage", "guide/combien-de-seances-detatouage"],

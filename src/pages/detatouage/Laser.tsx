@@ -2,80 +2,130 @@ import MainLayout from "@/layouts/MainLayout";
 import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import FAQ from "@/components/common/FAQ";
 import ReadNext from "@/components/common/ReadNext";
+import ToC from "@/components/common/ToC";
 import { Link } from "react-router-dom";
 import { SITE } from "@/lib/siteConfig";
 
 const Laser = () => {
+  const description = "Principe Q‑Switch/Pico, facteurs du nombre de séances, limites, effets secondaires et contre‑indications générales du détatouage.";
   return (
-    <MainLayout title="Détatouage au laser" description="Principe, séances estimées, limites et risques (placeholders).">
+    <MainLayout title="Détatouage au laser | Bye-Tatouage" description={description}>
       <BreadcrumbsNav />
       <h1>Détatouage au laser</h1>
-      <p className="text-muted-foreground">Le laser fragmente l’encre en particules éliminées progressivement par l’organisme. L’efficacité varie selon la couleur, la profondeur et la densité. Estimez un <Link to="/prix-detatouage" className="underline">budget</Link> et le <Link to="/guide/combien-de-seances-detatouage" className="underline">nombre de séances</Link> sur nos pages dédiées.</p>
+      <p className="text-muted-foreground mt-2">
+        Méthode de référence pour atténuer ou retirer un tatouage. Le laser fragmente l’encre pour que l’organisme l’élimine progressivement. Comparez les techniques <Link to="/detatouage/q-switch" className="underline">Q‑Switch</Link> et <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link>, et consultez nos <Link to="/prix-detatouage" className="underline">fourchettes de prix</Link>.
+      </p>
 
       <section className="mt-6 rounded-xl overflow-hidden shadow-soft">
-        <img src="/images/hero-technique.jpg" alt="Illustration d’un laser médical retirant un tatouage au bras" loading="lazy" decoding="async" />
+        <img src="/images/hero-tech.webp" alt="Illustration plate d’un dispositif de détatouage au laser en clinique" decoding="async" />
       </section>
 
-      <section className="mt-8">
-        <h2>Principe du laser</h2>
-        <p>Des impulsions lumineuses ciblent les pigments. Chaque passage fragmente un peu plus l’encre. Des intervalles de plusieurs semaines sont nécessaires pour la cicatrisation.</p>
+      <div className="mt-6 grid gap-6 md:grid-cols-[1fr_280px]">
+        <article>
+          <section className="mt-2">
+            <h2>Principe du laser Q-Switch/Pico (générique)</h2>
+            <p>
+              Le faisceau délivre des impulsions très courtes qui ciblent l’encre. Chaque tir fragmente les pigments, ensuite
+              drainés progressivement. Les dispositifs <strong>Q‑Switch</strong> (nanosecondes) et <strong>picoseconde</strong> (impulsions encore plus courtes) partagent ce principe avec des
+              paramètres différents. Le choix dépend de la couleur, de la densité et du <em>phototype</em>.
+            </p>
+          </section>
 
-        <h2 className="mt-6">Nombre de séances (facteurs)</h2>
-        <p>Couleurs (noir, bleu, rouge, vert), ancienneté, localisation, densité d’encre, phototype et matériel influencent la réponse. Un plan est toujours individualisé.</p>
+          <section className="mt-6">
+            <h2>Combien de séances ? Les facteurs</h2>
+            <p>
+              Le nombre total varie selon plusieurs critères. À titre indicatif, on espace généralement les séances de 6 à 8 semaines.
+              Voyez aussi notre guide sur le <Link to="/guide/combien-de-seances-detatouage" className="underline">nombre de séances</Link>.
+            </p>
+            <ul className="list-disc pl-5 text-sm mt-2">
+              <li>Couleur et type d’encre (noir/bleu souvent plus réactifs que rouge/vert).</li>
+              <li>Densité et profondeur du tatouage.</li>
+              <li>Ancienneté et emplacement (circulation locale, peau fine/épaisse).</li>
+              <li>Phototype et réaction individuelle.</li>
+              <li>Matériel et paramètres utilisés (Q‑Switch vs picoseconde).</li>
+            </ul>
+          </section>
 
-        <div className="mt-4 overflow-x-auto rounded-lg border shadow-soft">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="text-left">
-                <th className="p-3">Profil</th>
-                <th className="p-3">Estimation séances</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-t">
-                <td className="p-3">Petit noir (≤3cm)</td>
-                <td className="p-3">3–6</td>
-              </tr>
-              <tr className="border-t">
-                <td className="p-3">Moyen noir/bleu (≤8cm)</td>
-                <td className="p-3">6–10</td>
-              </tr>
-              <tr className="border-t">
-                <td className="p-3">Couleurs (rouge/vert)</td>
-                <td className="p-3">8–12</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <section className="mt-6">
+            <h2>Limites & effets secondaires possibles</h2>
+            <ul className="list-disc pl-5 text-sm">
+              <li>Rougeurs, œdème, sensation de brûlure transitoire.</li>
+              <li>Croûtes, petites phlyctènes locales possibles.</li>
+              <li>Hypo/hyperpigmentation, surtout en cas d’exposition solaire précoce.</li>
+              <li>Rarement, cicatrices en cas de frottements, grattage ou surpeeling.</li>
+            </ul>
+            <p className="mt-2">
+              Respectez strictement les <Link to="/guide/soins-apres-detatouage" className="underline">soins après détatouage</Link> et protégez-vous du soleil.
+            </p>
+          </section>
 
-        <h2 className="mt-6">Limites & risques</h2>
-        <p>Hypo/hyperpigmentation, croûtes transitoires, risque de cicatrice en cas de frottements/soleil. Suivez les <Link to="/guide/soins-apres-detatouage" className="underline">soins après détatouage</Link>.</p>
-      </section>
+          <section className="mt-6">
+            <h2>Contre-indications générales</h2>
+            <ul className="list-disc pl-5 text-sm">
+              <li>Exposition solaire récente ou à venir, bronzage actif.</li>
+              <li>Grossesse, allaitement (par précaution).</li>
+              <li>Infections cutanées locales, plaies, dermatites actives.</li>
+              <li>Certaines photosensibilisations médicamenteuses.</li>
+            </ul>
+          </section>
 
-      <section className="mt-8">
-        <h2>Exemples visuels</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {[1,2,3].map((i) => (
-            <figure key={i} className="rounded-lg overflow-hidden shadow-soft bg-card">
-              <img src={`/images/gallery-${i}.jpg`} alt={`Illustration avant/après ${i}`} loading="lazy" decoding="async" className="w-full h-40 object-cover" />
-            </figure>
-          ))}
-        </div>
-      </section>
+          <section className="mt-6">
+            <h2>Estimation de séances (indication générale)</h2>
+            <div className="mt-2 overflow-x-auto rounded-lg border shadow-soft">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left">
+                    <th className="p-3">Taille</th>
+                    <th className="p-3">Séances estimées</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t">
+                    <td className="p-3">XS (≤2 cm)</td>
+                    <td className="p-3">3–5</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-3">S (≤5 cm)</td>
+                    <td className="p-3">4–8</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-3">M (≤8 cm)</td>
+                    <td className="p-3">6–10</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="p-3">L (≤15 cm)</td>
+                    <td className="p-3">8–12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-muted-foreground mt-2">Valeurs indicatives : un plan personnalisé est nécessaire.</p>
+          </section>
+        </article>
 
-      <FAQ items={[
-        { q: "Est-ce définitif ?", a: "Une atténuation importante est fréquente ; la disparition totale dépend des encres (placeholder)." },
-        { q: "Intervalle entre les séances ?", a: "Généralement 6–8 semaines pour la cicatrisation (placeholder)." },
-        { q: "Douleur ?", a: "Variable. Des méthodes d’atténuation existent. Voir le guide Douleur (placeholder)." },
-      ]} />
-      <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
+        <ToC />
+      </div>
+
+      <FAQ
+        items={[
+          { q: "La procédure est-elle douloureuse ?", a: "La sensation est brève et piquante ; elle dépend de la zone et de la sensibilité individuelle. Des moyens d’atténuation peuvent être proposés." },
+          { q: "Quel intervalle entre les séances ?", a: "Le plus souvent 6–8 semaines pour laisser le temps à la peau de récupérer et au système immunitaire d’évacuer les pigments." },
+          { q: "Puis-je m’exposer au soleil ?", a: "Il faut éviter l’exposition avant et après les séances. Une protection solaire stricte est recommandée." },
+          { q: "Risque de cicatrices ?", a: "Il est faible avec des paramètres adaptés et des soins rigoureux, mais pas nul. Informez-vous sur les signes d’alerte et suivez les consignes." },
+        ]}
+      />
+
+      <p className="text-xs text-muted-foreground mt-6">
+        Ces informations sont générales et ne remplacent pas un avis médical personnalisé.
+      </p>
       <ReadNext />
+
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
         headline: "Détatouage au laser",
-        description: "Principe, séances estimées, limites et risques (placeholders).",
-        image: `${SITE.baseUrl}/images/hero-technique.jpg`,
+        description,
+        image: `${SITE.baseUrl}/images/hero-tech.webp`,
         mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/detatouage/laser` },
         author: { "@type": "Organization", name: SITE.name },
         publisher: { "@type": "Organization", name: SITE.name }

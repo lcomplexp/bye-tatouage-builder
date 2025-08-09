@@ -2,71 +2,68 @@ import MainLayout from "@/layouts/MainLayout";
 import BreadcrumbsNav from "@/components/common/BreadcrumbsNav";
 import FAQ from "@/components/common/FAQ";
 import ReadNext from "@/components/common/ReadNext";
+import ToC from "@/components/common/ToC";
 import { Link } from "react-router-dom";
 import { SITE } from "@/lib/siteConfig";
 
 const QSwitch = () => {
+  const description = "Principe et usages du Q‑Switch, atouts/limites selon les couleurs, et repères sur le nombre de séances et l’intervalle recommandé.";
   return (
-    <MainLayout title="Détatouage Q-Switch" description="Fonctionnement, indications et comparaison avec picoseconde (placeholders).">
+    <MainLayout title="Détatouage au laser Q-Switch | Bye-Tatouage" description={description}>
       <BreadcrumbsNav />
-      <h1>Laser Q-Switch</h1>
-      <p className="text-muted-foreground">Technologie historique du détatouage. Utile selon les encres et le contexte. Comparez avec le <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link>.</p>
+      <h1>Laser Q‑Switch</h1>
+      <p className="text-muted-foreground mt-2">
+        Référence historique pour le détatouage. Utile selon les encres et le contexte. Comparez avec le <Link to="/detatouage/picoseconde" className="underline">picoseconde</Link> et consultez les <Link to="/prix-detatouage" className="underline">prix indicatifs</Link>.
+      </p>
 
       <section className="mt-6 rounded-xl overflow-hidden shadow-soft">
-        <img src="/images/hero-technique.jpg" alt="Illustration d’un laser Q-Switch pour détatouage" loading="lazy" decoding="async" />
+        <img src="/images/hero-qswitch.webp" alt="Illustration plate d’un laser Q‑Switch de détatouage" decoding="async" />
       </section>
 
-      <section className="mt-8">
-        <h2>Principe</h2>
-        <p>Impulsions en nanosecondes ciblant l’encre. Plusieurs passages et séances espacées sont nécessaires.</p>
+      <div className="mt-6 grid gap-6 md:grid-cols-[1fr_280px]">
+        <article>
+          <section>
+            <h2>Principe et usages</h2>
+            <p>
+              Le Q‑Switch délivre des impulsions en nanosecondes qui ciblent l’encre. Plusieurs passages et séances espacées sont nécessaires pour permettre à la peau de récupérer.
+            </p>
+          </section>
 
-        <h2 className="mt-6">Pico vs Q-Switch (comparatif)</h2>
-        <div className="overflow-x-auto rounded-lg border shadow-soft mt-2">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="text-left">
-                <th className="p-3">Critère</th>
-                <th className="p-3">Picoseconde</th>
-                <th className="p-3">Q-Switch</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-t">
-                <td className="p-3">Durée d’impulsion</td>
-                <td className="p-3">Pico (10^-12 s)</td>
-                <td className="p-3">Nano (10^-9 s)</td>
-              </tr>
-              <tr className="border-t">
-                <td className="p-3">Pigments difficiles</td>
-                <td className="p-3">Parfois avantage</td>
-                <td className="p-3">Efficace sur noir/bleu</td>
-              </tr>
-              <tr className="border-t">
-                <td className="p-3">Disponibilité/coût</td>
-                <td className="p-3">Variable</td>
-                <td className="p-3">Souvent plus répandu</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <section className="mt-6">
+            <h2>Atouts / limites</h2>
+            <ul className="list-disc pl-5 text-sm">
+              <li>Atouts : disponibilité large, efficacité reconnue sur les encres noires/bleues, recul historique.</li>
+              <li>Limites : couleurs chaudes (rouge/orange) et certaines encres peuvent nécessiter plus de séances ou des paramètres spécifiques.</li>
+            </ul>
+          </section>
 
-        <h2 className="mt-6">Précautions</h2>
-        <p>Protection solaire, hygiène locale, éviter les frottements. Voir <Link to="/guide/soins-apres-detatouage" className="underline">soins après détatouage</Link>.</p>
-      </section>
+          <section className="mt-6">
+            <h2>Nombre de séances indicatif</h2>
+            <p>
+              Selon la taille, la couleur et la densité : souvent de 4 à 10 séances, parfois davantage pour les pièces colorées. Intervalle habituel : 6–8 semaines entre les séances.
+            </p>
+          </section>
+        </article>
+        <ToC />
+      </div>
 
-      <FAQ items={[
-        { q: "Pourquoi choisir le Q-Switch ?", a: "Selon l’indication, la disponibilité et l’expérience du centre (placeholder)." },
-        { q: "Douleur et suites ?", a: "Similaires aux autres lasers, variables selon la zone (placeholder)." },
-        { q: "Combien de séances ?", a: "Dépend des facteurs habituels (placeholder)." },
-      ]} />
-      <p className="text-xs text-muted-foreground mt-6">Ces informations ne remplacent pas un avis médical.</p>
+      <FAQ
+        items={[
+          { q: "Le Q‑Switch convient-il à tous les tatouages ?", a: "Il est souvent indiqué pour les noirs/bleus. Les couleurs chaudes peuvent être plus longues à traiter." },
+          { q: "Douleur et suites ?", a: "La sensation est brève et piquante ; rougeurs/croûtes transitoires possibles. Soins locaux et protection solaire indispensables." },
+          { q: "Combien de séances ?", a: "Variable selon l’encre et la peau ; on prévoit généralement plusieurs séances espacées de 6–8 semaines." },
+        ]}
+      />
+
+      <p className="text-xs text-muted-foreground mt-6">Ces informations sont générales et ne remplacent pas un avis médical personnalisé.</p>
       <ReadNext />
+
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
-        headline: "Détatouage Q-Switch",
-        description: "Fonctionnement, indications et comparaison avec picoseconde (placeholders).",
-        image: `${SITE.baseUrl}/images/hero-technique.jpg`,
+        headline: "Détatouage au laser Q-Switch",
+        description,
+        image: `${SITE.baseUrl}/images/hero-qswitch.webp`,
         mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.baseUrl}/detatouage/q-switch` },
         author: { "@type": "Organization", name: SITE.name },
         publisher: { "@type": "Organization", name: SITE.name }
