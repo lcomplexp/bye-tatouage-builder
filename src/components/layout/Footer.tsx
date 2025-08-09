@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NAV } from "@/lib/siteConfig";
 
 const Footer = () => {
   return (
@@ -7,14 +8,27 @@ const Footer = () => {
         <div>
           <h3 className="text-sm font-semibold text-primary mb-3">Navigation</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/a-propos" className="hover:underline">À propos</Link></li>
-            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-            <li><Link to="/blog" className="hover:underline">Blog</Link></li>
+            {NAV.footer.navigation.map((item) => (
+              <li key={item.href}>
+                <Link to={item.href} className="hover:underline">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
-          <h3 className="text-sm font-semibold text-primary mb-3">Mentions</h3>
-          <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} Bye-Tatouage. Tous droits réservés.</p>
+          <h3 className="text-sm font-semibold text-primary mb-3">Légales</h3>
+          <ul className="space-y-2 text-sm">
+            {NAV.footer.legal.map((item) => (
+              <li key={item.href}>
+                <Link to={item.href} className="hover:underline">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="text-muted-foreground text-sm mt-4">© {new Date().getFullYear()} Bye-Tatouage. Tous droits réservés.</p>
           <p className="text-muted-foreground text-sm mt-2">Ce site ne remplace pas un avis médical. Consultez un professionnel de santé.</p>
         </div>
         <div>

@@ -11,14 +11,31 @@ export const SITE = {
   indexable,
 };
 
-export const NAV_ITEMS = [
-  { label: "Techniques", href: "/detatouage" },
-  { label: "Prix", href: "/prix-detatouage" },
-  { label: "Guides", href: "/guide" },
-  { label: "Zones", href: "/zones" },
-  { label: "Avant/Après", href: "/avant-apres" },
-  { label: "Ressources", href: "/ressources" },
-  { label: "Blog", href: "/blog" },
-  { label: "À propos", href: "/a-propos" },
-  { label: "Contact", href: "/contact" },
-] as const;
+export const NAV = {
+  main: [
+    { label: "Techniques", href: "/detatouage" },
+    { label: "Prix", href: "/prix-detatouage" },
+    { label: "Guides", href: "/guide" },
+    { label: "Zones", href: "/zones" },
+    { label: "Avant/Après", href: "/avant-apres" },
+    { label: "Ressources", href: "/ressources" },
+    { label: "Blog", href: "/blog" },
+  ],
+  footer: {
+    navigation: [
+      { label: "Techniques", href: "/detatouage" },
+      { label: "Prix", href: "/prix-detatouage" },
+      { label: "Guides", href: "/guide" },
+      { label: "Zones", href: "/zones" },
+      { label: "Avant/Après", href: "/avant-apres" },
+      { label: "Ressources", href: "/ressources" },
+      { label: "Blog", href: "/blog" },
+    ],
+    legal: [
+      { label: "À propos", href: "/a-propos" },
+      { label: "Contact", href: "/contact" },
+      // { label: "Mentions légales", href: "/mentions-legales" }, // Ajouter si présent
+      // { label: "Politique de confidentialité", href: "/politique-de-confidentialite" }, // Ajouter si présent
+    ],
+  },
+} as const;
